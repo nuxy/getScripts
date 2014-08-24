@@ -14,8 +14,6 @@
 	var methods = {
 		"init" : function(files, callback) {
 			return this.each(function() {
-				var count = 1;
-
 				if (!files instanceof Array || files.length == 0) {
 					throw(new Error('Invalid array'));
 				}
@@ -24,19 +22,24 @@
 					throw(new Error('Invalid callback function'));
 				}
 
-				var _callback = function() {
-					if (files.length == count++ && callback) {
-						callback();
-					}
-				};
+				var count = 0;
 
-				for (var i = 0; i < files.length; i++) {
-					$.getScript(files[i])
+				// execute as recursive callback
+				var _callback = function() {
+					if (files.length == count && callback) {
+						return callback();
+					}
+
+					$.getScript(files[count])
 						.done(_callback)
 						.fail(function() {
-							throw(new Error("Import path '" + files[i] + "' is not valid"));
+							throw(new Error("Import path '" + files[count] + "' is not valid"));
 						});
-				}
+
+					count++;
+				};
+
+				_callback();
 			});
 		}
 	};
