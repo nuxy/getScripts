@@ -26,8 +26,12 @@
 
 				// execute as recursive callback
 				var _callback = function() {
-					if (files.length == count && callback) {
-						return callback();
+					if (files.length == count) {
+						if (callback) {
+							callback();
+						}
+
+						return true;
 					}
 
 					$.getScript(files[count])
