@@ -1,0 +1,20 @@
+{
+  "name": "jquery-getscripts",
+  "version": "1.0.0-alpha",
+  "main": "jquery.getScripts.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.rdoc",
+    "Rakefile",
+    "test"
+  ],
+  "dependencies": [
+    "jquery": "1.8.3"
+  ],
+  "keywords": [
+    "javascript",
+    "jquery",
+    "library"
+  ]
+}
