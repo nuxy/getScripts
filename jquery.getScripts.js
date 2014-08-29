@@ -34,10 +34,12 @@
 						return true;
 					}
 
-					$.getScript(files[count])
+					var script = files[count];
+
+					$.getScript(script)
 						.done(_callback)
-						.fail(function() {
-							throw(new Error("Import path '" + files[count] + "' is not valid"));
+						.fail(function(jqxhr, settings, exception) {
+							throw(new Error("Script '" + script + "' failed with exception\n" + exception));
 						});
 
 					count++;
