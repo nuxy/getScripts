@@ -1,5 +1,5 @@
 {
-  "name": "jquery-getscripts",
+  "name": "getScripts",
   "version": "1.0.0-alpha",
   "main": "jquery.getScripts.js",
   "license": "MIT",
