@@ -11,6 +11,10 @@ jQuery shorthand extended to support ordered asynchronous requests.
 
 == Installation
 
+This package can be easily installed using Bower.
+
+    $ bower install getscripts
+
 Add the following Javascript between the <head></head> tags of your HTML document.  jQuery plug-in order is important.
 
     <script src="/path/to/jquery.js"></script>
