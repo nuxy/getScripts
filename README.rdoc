@@ -7,7 +7,7 @@ jQuery shorthand extended to support ordered asynchronous requests.
 - Compatible with Firefox 3.6+, Chrome, Safari 5+, Opera, and Internet Explorer 7+ web browsers.
 - Compatible with iOS and Android mobile web browsers.
 - Loads and initializes JavaScript in an ordered fashion.
-- Fast and lightweight (jQuery plug-in *only 1 kB)
+- Fast and lightweight (jQuery plug-in *only 1.3 kB)
 
 == Installation
 
