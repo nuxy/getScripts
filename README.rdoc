@@ -11,7 +11,7 @@ jQuery shorthand extended to support ordered asynchronous requests.
 
 == Installation
 
-This package can be easily installed using Bower.
+This package can be easily installed using {Bower}[http://bower.io].
 
     $ bower install getscripts
 
