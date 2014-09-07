@@ -10,15 +10,19 @@
  *    jquery.js
  */
 
+if (!window.jQuery || (window.jQuery && window.jQuery.fn.jquery < '1.8.3')) {
+	alert('getScripts requires jQuery 1.8.3 or greater.');
+}
+
 (function($) {
 	var methods = {
 		"init" : function(files, callback) {
 			return this.each(function() {
-				if (!files instanceof Array || files.length == 0) {
+				if (! $.isArray(files) || files.length == 0) {
 					throw(new Error('Invalid array'));
 				}
 
-				if (callback && typeof callback !== 'function') {
+				if (callback && ! $.isFunction(callback) ) {
 					throw(new Error('Invalid callback function'));
 				}
 
