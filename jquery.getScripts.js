@@ -11,19 +11,19 @@
  */
 
 if (!window.jQuery || (window.jQuery && window.jQuery.fn.jquery < '1.8.3')) {
-	alert('getScripts requires jQuery 1.8.3 or greater.');
+	throw new Error('getScripts requires jQuery 1.8.3 or greater.');
 }
 
 (function($) {
 	var methods = {
-		"init" : function(files, callback) {
+		"init": function(files, callback) {
 			return this.each(function() {
-				if (! $.isArray(files) || files.length == 0) {
-					throw(new Error('Invalid array'));
+				if (!$.isArray(files) || files.length == 0) {
+					throw new Error('Invalid array');
 				}
 
-				if (callback && ! $.isFunction(callback) ) {
-					throw(new Error('Invalid callback function'));
+				if (callback && !$.isFunction(callback)) {
+					throw new Error('Invalid callback function');
 				}
 
 				var count = 0;
@@ -43,7 +43,7 @@ if (!window.jQuery || (window.jQuery && window.jQuery.fn.jquery < '1.8.3')) {
 					$.getScript(script)
 						.done(_callback)
 						.fail(function(jqxhr, settings, exception) {
-							throw(new Error("Script '" + script + "' failed with exception\n" + exception));
+							throw new Error("Script '" + script + "' failed with exception\n" + exception);
 						});
 
 					count++;
