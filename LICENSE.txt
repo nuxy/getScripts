@@ -1,6 +1,7 @@
-getScripts - A lightweight asynchronous JavaScript loader
+getScripts (jQuery shorthand extended)
+A lightweight asynchronous JavaScript loader.
 
-Copyright 2014, Marc S. Brooks (http://mbrooks.info)
+Copyright 2015, Marc S. Brooks (https://mbrooks.info)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
