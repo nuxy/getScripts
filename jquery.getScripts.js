@@ -38,11 +38,11 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
       // Support method chaining.
       return this.each(function() {
         if (!$.isArray(files) || files.length == 0) {
-          throw new Error('Invalid array');
+          $.error('Invalid array');
         }
 
         if (callback && !$.isFunction(callback)) {
-          throw new Error('Invalid callback function');
+          $.error('Invalid callback function');
         }
 
         var count = 0;
@@ -62,7 +62,7 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
           $.getScript(script)
             .done(_callback)
             .fail(function(jqxhr, settings, exception) {
-              throw new Error("Script '" + script + "' failed with exception\n" + exception);
+              $.error("Script '" + script + "' failed with exception\n" + exception);
             });
 
           count++;
