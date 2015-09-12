@@ -1,6 +1,6 @@
 {
   "name": "getscripts",
-  "version": "0.8.3-alpha",
+  "version": "1.0.0",
   "homepage": "https://github.com/nuxy/getscripts",
   "description": "A lightweight asynchronous JavaScript loader (jQuery shorthand extended).",
   "main": "jquery.getScripts.js",
