@@ -37,7 +37,7 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
 
       // Support method chaining.
       return this.each(function() {
-        if (!$.isArray(files) || files.length == 0) {
+        if (!$.isArray(files) || files.length === 0) {
           $.error('Invalid array');
         }
 
